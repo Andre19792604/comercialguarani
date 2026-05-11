@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página não encontrada — Comercial Guarani</title>
+<meta name="description" content="Página não encontrada. Volte à Home da Comercial Guarani para continuar navegando.">
+<meta property="og:title" content="Página não encontrada — Comercial Guarani">
+<meta property="og:description" content="Página não encontrada. Volte à Home da Comercial Guarani para continuar navegando.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Comercial Guarani">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C8102E;
+    --red-dark: #A00D24;
+    --graphite: #1F1F1F;
+    --steel: #555;
+    --silver: #888;
+    --line: #E5E5E5;
+    --bg: #F4F4F4;
+    --white: #FFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, var(--graphite) 0%, #2C2C2C 100%);
+    color: var(--white);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    overflow: hidden;
+    position: relative;
+  }
+  body::before {
+    content: '';
+    position: absolute;
+    top: -30%; right: -20%;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(200,16,46,0.12) 0%, transparent 60%);
+  }
+  .wrap {
+    text-align: center;
+    max-width: 540px;
+    position: relative;
+    z-index: 1;
+  }
+  .num {
+    font-size: 144px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, var(--red) 0%, #E63946 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  h1 { font-size: 28px; font-weight: 900; margin-bottom: 12px; letter-spacing: -0.01em; }
+  p { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 28px; line-height: 1.5; }
+  .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+  }
+  .btn-primary { background: var(--red); color: var(--white); }
+  .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(200,16,46,0.3); }
+  .btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.3); }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
+  .btn svg { width: 16px; height: 16px; }
+  @media (max-width: 600px) {
+    .num { font-size: 96px; }
+    h1 { font-size: 22px; }
+    p { font-size: 14px; }
+  }
+
+  /* ============================================================
+     CORREÇÕES MOBILE (auditoria 11/05/2026)
+     ============================================================ */
+  
+  /* CORREÇÃO GLOBAL: prevenir overflow horizontal */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Header: garantir que não estoura no mobile */
+  @media (max-width: 700px) {
+    .header-inner {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    .search-wrap {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+    .h-actions {
+      width: 100%;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .search-cat {
+      min-width: 100px;
+      max-width: 110px;
+      font-size: 12px;
+      padding: 0 8px;
+      padding-right: 22px;
+    }
+    .search-input {
+      min-width: 0;
+      flex: 1;
+    }
+    .search-btn {
+      flex-shrink: 0;
+      padding: 0 14px;
+    }
+  }
+  
+  /* Catbar: garantir scroll horizontal interno funcionando */
+  .catbar { overflow: hidden; max-width: 100vw; }
+  .catbar-inner {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap !important;
+    width: 100%;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .catbar-inner .cat-link {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  /* Grid de produtos em mobile pequeno: 1 coluna */
+  @media (max-width: 480px) {
+    .products-grid,
+    .prod-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .deps-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  
+  /* Container geral: prevenir overflow */
+  .container, .wrap, main {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="num">404</div>
+    <h1>Esta peça não está no nosso estoque</h1>
+    <p>A página que você procurou não existe ou foi movida. Volte pra Home ou explore as telas do protótipo.</p>
+    <div class="btns">
+      <a href="./" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
+        Voltar para Home
+      </a>
+      <a href="empresas/" class="btn btn-outline">
+        Empresas e Frotas
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
